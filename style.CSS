@@ -1,0 +1,149 @@
+/* Global styles and accessibility resets */
+body {
+    margin: 0;
+    padding: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+ 
+/* Accessible focus state for keyboard navigation */
+:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+ 
+/* --- Profile Card --- */
+/* Mobile-first: default is a single-column layout */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden; /* Keeps child elements within the rounded corners */
+}
+ 
+/* Avatar container and image */
+.profile-avatar-container {
+    margin: 0;
+}
+ 
+.profile-avatar-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+ 
+/* Main content area */
+.profile-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word; /* Prevents long text from breaking layout */
+}
+ 
+/* Header: Name and Bio */
+.profile-content header h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.75rem;
+    color: #111;
+}
+ 
+.profile-content header p {
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+ 
+/* Social media links */
+.profile-socials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+ 
+.profile-socials a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #5c95ff;
+    border-radius: 20px;
+    color: #5c95ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+ 
+.profile-socials a:hover,
+.profile-socials a:focus-visible {
+    background-color: #5c95ff;
+    color: #ffffff;
+}
+ 
+/* Hobbies/Dislikes lists */
+.profile-list {
+    margin-bottom: 1.5rem;
+}
+ 
+.profile-list h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.25rem;
+}
+ 
+.profile-list ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #444;
+}
+ 
+.profile-list li {
+    margin-bottom: 0.25rem;
+}
+ 
+/* Footer: Time */
+.profile-content footer {
+    margin-top: auto; /* Pushes footer down in desktop view */
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #777;
+}
+ 
+.profile-content footer span {
+    font-weight: 600;
+    color: #333;
+    margin-left: 0.5rem;
+}
+ 
+/* --- Responsiveness: Tablet & Desktop --- */
+/* Media query for screens wider than 768px */
+@media (min-width: 768px) {
+    .profile-card {
+        /* Switch to a 2-column grid layout */
+        display: grid;
+        grid-template-columns: 250px 1fr; /* Fixed-width avatar, flexible content */
+    }
+ 
+    .profile-avatar-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures image fills the container without distortion */
+    }
+ 
+    .profile-content {
+        padding: 2rem;
+    }
+}
+ 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.CSS">
+        <script src="script.js" defer> </script>
+        <title>
+Hng User Profile Tag
+        </title>
+    </head>
+    <body>
+        <main>
+        <!-- Profile Card Root Container -->
+        <article class="profile-card" data-testid="test-profile-card">
+ 
+            <!-- User Avatar Section -->
+            <figure class="profile-avatar-container">
+                <img
+                    src="https://placehold.co/250x400/5c95ff/ffffff?text=User"
+                    alt="User's avatar photo"
+                    data-testid="test-user-avatar"
+                >
+            </figure>
+ 
+            <!-- Main Content Area -->
+            <div class="profile-content">
+                <!-- Header with Name and Bio -->
+                <header>
+                    <h2 data-testid="test-user-name">Udu Blessing</h2>
+                    <p data-testid="test-user-bio">A creative frontend developer passionate about building accessible and user-friendly web applications. Always learning and exploring new technologies.</p>
+                </header>
+ 
+                <!-- Social Media Links -->
+                <nav class="profile-socials" aria-label="Social Media Links">
+                    <ul data-testid="test-user-social-links">
+                        <li><a href="www.linkedin.com/in/udublessingkelle" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+                        <li><a href="https://x.com/stephenmayowa16" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+                        <li><a href="https://web.facebook.com/stephen.mayowa.10" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+                    </ul>
+                </nav>
+ 
+                <!-- Hobbies Section -->
+                <section class="profile-list" aria-labelledby="hobbies-heading">
+                    <h3 id="hobbies-heading">Hobbies</h3>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Reading</li>
+                        <li>Volleyball</li>
+                        <li>Food Sampling</li>
+                    </ul>
+                </section>
+                
+                <!-- Dislikes Section -->
+                <section class="profile-list" aria-labelledby="dislikes-heading">
+                    <h3 id="dislikes-heading">Dislikes</h3>
+                    <ul data-testid="test-user-dislikes">
+                        <li>Parties</li>
+                        <li>Football</li>
+                        <li>Travelling</li>
+                    </ul>
+                </section>
+                
+                <!-- Footer with Current Time -->
+                <footer>
+                    <p>Current Time (ms): <span data-testid="test-user-time"></span></p>
+                </footer>
+            </div>
+            
+        </article>
+    </main>
+    </body>
+</html>
